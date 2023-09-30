@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "latest": "^0.2.0",
+    "prismjs": "^1.29.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

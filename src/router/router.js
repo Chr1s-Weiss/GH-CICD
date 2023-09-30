@@ -9,7 +9,7 @@ const router = new createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/GH-CICD',
+      path: '/',
       name: 'HomePage',
       component: HomePage,
     },

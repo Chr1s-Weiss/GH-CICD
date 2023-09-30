@@ -1,6 +1,9 @@
 <script>
+import {RouterLink} from 'vue-router';
+
 export default {
   name: 'NavigationComponent',
+  components: {RouterLink},
 };
 </script>
 
@@ -9,7 +12,7 @@ export default {
   <footer :class="$style['footer']">
     <nav :class="$style['nav']">
       <ul :class="$style['navigation']">
-        <li
+        <RouterLink
           :class="$style['center']"
           to="/"
         >
@@ -21,10 +24,10 @@ export default {
           <div :class="$style['nav-item']">
             Home
           </div>
-        </li>
-        <li
+        </RouterLink>
+        <RouterLink
           :class="$style['center']"
-          to="/"
+          to="/DeepDive"
         >
           <img
             :class="$style['nav-icon']"
@@ -34,7 +37,7 @@ export default {
           <div :class="$style['nav-item']">
             DeepDive
           </div>
-        </li>
+        </RouterLink>
       </ul>
     </nav>
   </footer>
@@ -46,7 +49,7 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #E1DEE9;
+  background-color: var(--light-green);
 }
 
 .nav{
