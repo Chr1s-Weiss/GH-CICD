@@ -9,12 +9,12 @@ const router = new createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
+      path: '/GH-CICD',
       name: 'HomePage',
       component: HomePage,
     },
     {
-      path: '/deepdive',
+      path: '/GH_CICD/deepdive',
       name: 'DeepDive',
       component: DeepDive,
     },

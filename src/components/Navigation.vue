@@ -14,7 +14,7 @@ export default {
       <ul :class="$style['navigation']">
         <RouterLink
           :class="$style['center']"
-          to="/"
+          to="/GH-CICD"
         >
           <img
             :class="$style['nav-icon']"
@@ -27,7 +27,7 @@ export default {
         </RouterLink>
         <RouterLink
           :class="$style['center']"
-          to="/DeepDive"
+          to="/GH_CICD/DeepDive"
         >
           <img
             :class="$style['nav-icon']"

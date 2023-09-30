@@ -218,7 +218,16 @@
       I found out that it is possible to setup a CI/CD
       Pipeline using Github and deploying the website on Github-Pages. Since I
       was already familiar with Github
-
+      <h3>Deploy Vite App to Github Pages</h3>
+      <p>
+        To tackle this challenge, I followed a series of steps to deploy a
+        Vite app to GitHub Pages.
+      </p>
+      <h4>Step 1: Setting Up the Vite Project</h4>
+      <p>
+        Opened Visual Studio Code (VSCode) to begin the project setup.
+        Initialized a Vue project using Vite with the following commands:
+      </p>
       <div>
         <prism-editor
           v-model="code"
@@ -227,16 +236,101 @@
           line-numbers
         />
 
-        <pre><code class="language-javascript">
-      // Your JavaScript code here
-      const message = "Hello, World!";
-      console.log(message);
-    </code></pre>
-
         <pre><code class="language-bash">
-      # Your shell command here
-      npm install vue
-    </code></pre>
+          npm init vite
+          [Type project name]
+          Select Vue
+          Select JavaScript
+          cd gh-cicd
+          npm install
+          npm run dev
+        </code></pre>
+        <p>Entered the project name.</p>
+        <p>Selected Vue as the framework.</p>
+        <p>Chose JavaScript as the programming</p>
+        <p>Navigated to the project directory using the command:language.</p>
+        <pre><code class="language-bash">
+          cd gh-cicd
+        </code></pre>
+        <p>Installed project dependencies:</p>
+        <pre><code class="language-bash">
+          npm install
+        </code></pre>
+        <p>Started the development server:</p>
+        <pre><code class="language-bash">
+          npm run dev
+        </code></pre>
+        <p>
+          Tested the application's functionality by opening it in a
+          web browser using the URL: http://localhost:5173/.
+          As you can see in the picture, the App is displayed on the browser.
+          Furthermore, I made some changes to the HTML to check functionality.
+        </p>
+        <img
+          style="margin: 0 auto; width: 25rem;"
+          src="/App-check.png"
+          alt=""
+        >
+        <h4>Step 2: Connecting the App to GitHub</h4>
+        <p>
+          To enable deployment on GitHub Pages, I needed to connect the Vite
+          app to a GitHub repository. Here's how I did it:
+
+          Created a new GitHub repository for the project on
+          <a href="https://github.com/">Github</a>.
+          Followed the steps outlined in
+          <a href="https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github">Adding locally hosted code to GitHub</a>
+          to establish the connection between the local project and the
+          GitHub repository.
+        </p>
+        <h4>Step 3: Configuring Deployment</h4>
+        <p>
+          To deploy the Vite app on GitHub Pages, I made some necessary
+          configurations:
+
+          Modified the <em>base</em> setting in the to match the name of the
+          GitHub repository.
+
+          Built the Vite project into a deployable folder using the following
+          command:
+        </p>
+        <pre><code class="language-bash">
+          npm run build
+        </code></pre>
+        <p>
+          Since the <em>/dist</em> folder was listed in the <em>.gitignore</em>
+          file, I forced it to be added to the repository:
+        </p>
+        <pre><code class="language-bash">
+          git add dist -f
+        </code></pre>
+        <p>Committed this change with an appropriate message:</p>
+        <pre><code class="language-bash">
+          git commit -m "adding dist"
+        </code></pre>
+        <p>
+          Pushed the <em>gh-pages</em> branch as a subtree of the
+          master branch to
+          GitHub using the following command:
+        </p>
+        <pre><code class="language-bash">
+          git subtree push --prefix dist origin gh-pages
+        </code></pre>
+        <p>
+          And again the Vite project is perfectly displayed and
+          functional in the browser. Only this time under a public domain.
+        </p>
+        <h4>Conclusion</h4>
+        <p>
+          After completing these steps, the Vite project was successfully
+          deployed on GitHub Pages. The application is now accessible under
+          a public domain, allowing others to access and use it.
+        </p>
+        <img
+          style="margin: 0 auto; width: 25rem;"
+          src="/Deploy-check.png"
+          alt=""
+        >
       </div>
     </section>
   </div>
@@ -268,15 +362,5 @@ export default {
 
 .documentation {
   margin-top: 20px;
-}
-
-/* Styles for code and shell boxes */
-.code-box,
-.shell-box {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 20px 0;
 }
 </style>

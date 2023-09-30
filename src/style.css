@@ -306,6 +306,10 @@ a{
           9px -9px 21px #ffffff;
 }
 
+.documentation{
+  padding-bottom: 15%;
+}
+
 /* sections */
 
 #about{

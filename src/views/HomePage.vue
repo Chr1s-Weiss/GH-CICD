@@ -5,7 +5,7 @@
       <div class="container flex">
         <picture class="portrait">
           <img
-            src="\public\Picture_Christian.jpg"
+            src="\Picture_Christian.jpg"
             alt="Personal portrait"
           >
         </picture>
@@ -23,7 +23,7 @@
       <a href="#profile">
         <img
           style="width: 2rem;"
-          src="/public/arrow-down.png"
+          src="/arrow-down.png"
           alt=""
         ></a>
     </section>
@@ -64,7 +64,7 @@
             >
               <a href="https://www.linkedin.com/in/christian-weiss-sbg/"><img
                 id="linkedin"
-                src="/public/linkedin.svg"
+                src="/linkedin.svg"
                 alt="Linkedin Icon"
               ></a>
             </div>
